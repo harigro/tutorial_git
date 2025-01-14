@@ -1,0 +1,23 @@
+site_name: Gitdocs
+theme:
+  name: material
+plugins:
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: id
+          name: Indonesian
+          build: true
+nav:
+  - Home: index.md
+  - Gabungan: gabungan/Menggabungkan_Repo_Lokal_dengan_GitHub.md
+  - Komit: komit/Menghapus dan Membatalkan Commit dengan Git.md
+  - Kontributor: kontributor/Panduan Lengkap Membuat Pull Request di GitHub untuk Kontributor Pemula.md
+  - Mengunggah: mengunggah/upload_repo_to_github.md
+markdown_extensions:
+  - toc:
+      permalink: true
