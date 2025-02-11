@@ -1,0 +1,759 @@
+
+<!doctype html>
+<html lang="id" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../komit/Menghapus%20dan%20Membatalkan%20Commit%20dengan%20Git/">
+      
+      
+        <link rel="next" href="../../mengunggah/upload_repo_to_github/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Kontributor - Gitdocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#panduan-lengkap-membuat-pull-request-di-github-untuk-kontributor-pemula" class="md-skip">
+          Lewati ke isi
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="Gitdocs" class="md-header__button md-logo" aria-label="Gitdocs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Gitdocs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Kontributor
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Pilih bahasa">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../kontributor/Panduan%20Lengkap%20Membuat%20Pull%20Request%20di%20GitHub%20untuk%20Kontributor%20Pemula/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="id" class="md-select__link">
+              Indonesian
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigasi" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="Gitdocs" class="md-nav__button md-logo" aria-label="Gitdocs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Gitdocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gabungan/Menggabungkan_Repo_Lokal_dengan_GitHub/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gabungan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../komit/Menghapus%20dan%20Membatalkan%20Commit%20dengan%20Git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Komit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Kontributor
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Kontributor
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Daftar isi">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Daftar isi
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-fork-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Fork Repository
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-clone-repository-fork" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Clone Repository Fork
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-buat-branch-baru" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Buat Branch Baru
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-lakukan-perubahan" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Lakukan Perubahan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-commit-perubahan" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Commit Perubahan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-push-branch-ke-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Push Branch ke GitHub
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-ajukan-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Ajukan Pull Request
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-review-dan-diskusi" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Review dan Diskusi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-merge-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Merge Pull Request
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#catatan-tambahan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Catatan Tambahan
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mengunggah/upload_repo_to_github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mengunggah
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Daftar isi">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Daftar isi
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-fork-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Fork Repository
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-clone-repository-fork" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Clone Repository Fork
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-buat-branch-baru" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Buat Branch Baru
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-lakukan-perubahan" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Lakukan Perubahan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-commit-perubahan" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Commit Perubahan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-push-branch-ke-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Push Branch ke GitHub
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-ajukan-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Ajukan Pull Request
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-review-dan-diskusi" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Review dan Diskusi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-merge-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Merge Pull Request
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#catatan-tambahan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Catatan Tambahan
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="panduan-lengkap-membuat-pull-request-di-github-untuk-kontributor-pemula">Panduan Lengkap Membuat Pull Request di GitHub untuk Kontributor Pemula<a class="headerlink" href="#panduan-lengkap-membuat-pull-request-di-github-untuk-kontributor-pemula" title="Permanent link">&para;</a></h1>
+<h3 id="1-fork-repository">1. <strong>Fork Repository</strong><a class="headerlink" href="#1-fork-repository" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Tujuan</strong>: Membuat salinan dari repository utama ke akun GitHub Anda.</li>
+<li><strong>Langkah-langkah</strong>:</li>
+<li>Buka halaman repository yang ingin Anda kontribusikan.</li>
+<li>Klik tombol <strong>Fork</strong> di pojok kanan atas halaman.</li>
+<li>Tunggu proses fork selesai, maka repository akan muncul di akun GitHub Anda.</li>
+</ul>
+<hr />
+<h3 id="2-clone-repository-fork">2. <strong>Clone Repository Fork</strong><a class="headerlink" href="#2-clone-repository-fork" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Tujuan</strong>: Mendownload repository fork ke komputer lokal untuk diedit.</p>
+</li>
+<li>
+<p><strong>Langkah-langkah</strong>:</p>
+</li>
+<li>
+<p>Salin URL repository fork Anda. Klik tombol <strong>Code</strong>, lalu salin link HTTPS.</p>
+</li>
+<li>
+<p>Jalankan perintah di terminal:</p>
+<p><code>bash
+ git clone https://github.com/username/repository-name.git</code></p>
+<blockquote>
+<p>Ganti <code>username</code> dengan nama akun GitHub Anda, dan <code>repository-name</code> dengan nama repository.</p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h3 id="3-buat-branch-baru">3. <strong>Buat Branch Baru</strong><a class="headerlink" href="#3-buat-branch-baru" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Tujuan</strong>: Memisahkan perubahan dari branch utama agar lebih terorganisir.</p>
+</li>
+<li>
+<p><strong>Langkah-langkah</strong>:</p>
+</li>
+<li>
+<p>Masuk ke folder repository:</p>
+<p><code>bash
+ cd repository-name</code></p>
+</li>
+<li>
+<p>Buat branch baru dengan nama deskriptif:</p>
+<p><code>bash
+ git checkout -b fitur-login</code></p>
+<blockquote>
+<p>Ganti <code>fitur-login</code> dengan nama branch sesuai perubahan yang Anda lakukan.</p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h3 id="4-lakukan-perubahan">4. <strong>Lakukan Perubahan</strong><a class="headerlink" href="#4-lakukan-perubahan" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Tujuan</strong>: Mengedit file sesuai kebutuhan.</li>
+<li><strong>Langkah-langkah</strong>:</li>
+<li>Buka file yang ingin Anda ubah menggunakan editor teks favorit (misalnya, VSCode).</li>
+<li>Lakukan perubahan seperti menambahkan fitur baru, memperbaiki bug, atau memperbarui dokumentasi.</li>
+<li>Setelah selesai, simpan file.</li>
+</ul>
+<hr />
+<h3 id="5-commit-perubahan">5. <strong>Commit Perubahan</strong><a class="headerlink" href="#5-commit-perubahan" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Tujuan</strong>: Menyimpan catatan perubahan pada branch lokal.</p>
+</li>
+<li>
+<p><strong>Langkah-langkah</strong>:</p>
+</li>
+<li>
+<p>Tambahkan perubahan ke staging area:</p>
+<p><code>bash
+ git add .</code></p>
+</li>
+<li>
+<p>Commit perubahan dengan pesan deskriptif:</p>
+<p><code>bash
+ git commit -m "Menambahkan fitur login"</code></p>
+</li>
+</ul>
+<hr />
+<h3 id="6-push-branch-ke-github">6. <strong>Push Branch ke GitHub</strong><a class="headerlink" href="#6-push-branch-ke-github" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Tujuan</strong>: Mengirim branch ke repository fork di GitHub.</p>
+</li>
+<li>
+<p><strong>Langkah-langkah</strong>:</p>
+</li>
+<li>
+<p>Push branch ke repository:</p>
+<p><code>bash
+ git push origin fitur-login</code></p>
+</li>
+<li>
+<p>Setelah push, GitHub akan memberikan link ke branch Anda.</p>
+</li>
+</ul>
+<hr />
+<h3 id="7-ajukan-pull-request">7. <strong>Ajukan Pull Request</strong><a class="headerlink" href="#7-ajukan-pull-request" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Tujuan</strong>: Mengajukan perubahan untuk ditinjau oleh maintainer repository utama.</li>
+<li><strong>Langkah-langkah</strong>:</li>
+<li>Buka repository fork Anda di GitHub.</li>
+<li>Klik tombol <strong>Compare &amp; pull request</strong>.</li>
+<li>Pastikan:<ul>
+<li>Branch sumber adalah <code>username/fitur-login</code>.</li>
+<li>Branch target adalah branch utama repository asal, misalnya <code>main</code> atau <code>master</code>.</li>
+</ul>
+</li>
+<li>Isi deskripsi pull request, misalnya:<ul>
+<li>Apa yang diubah?</li>
+<li>Mengapa perubahan ini penting?</li>
+<li>Instruksi tambahan jika ada.</li>
+</ul>
+</li>
+<li>Klik tombol <strong>Create pull request</strong>.</li>
+</ul>
+<hr />
+<h3 id="8-review-dan-diskusi">8. <strong>Review dan Diskusi</strong><a class="headerlink" href="#8-review-dan-diskusi" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Tujuan</strong>: Memastikan perubahan Anda diterima tanpa konflik.</p>
+</li>
+<li>
+<p><strong>Langkah-langkah</strong>:</p>
+</li>
+<li>
+<p>Maintainer akan meninjau perubahan.</p>
+</li>
+<li>
+<p>Jika ada masalah, mereka akan memberikan komentar atau meminta revisi.</p>
+</li>
+<li>
+<p>Perbaiki masalah jika ada, lalu commit ulang dan push:</p>
+<p><code>bash
+ git add .
+ git commit -m "Memperbaiki validasi form login"
+ git push origin fitur-login</code></p>
+</li>
+</ul>
+<hr />
+<h3 id="9-merge-pull-request">9. <strong>Merge Pull Request</strong><a class="headerlink" href="#9-merge-pull-request" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Tujuan</strong>: Menggabungkan perubahan ke branch utama.</li>
+<li><strong>Langkah-langkah</strong>:</li>
+<li>Jika pull request disetujui, maintainer akan mengklik <strong>Merge</strong>.</li>
+<li>Anda akan menerima notifikasi bahwa pull request berhasil digabungkan.</li>
+</ul>
+<hr />
+<h3 id="catatan-tambahan">Catatan Tambahan<a class="headerlink" href="#catatan-tambahan" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Selalu Sinkronisasi dengan Repository Utama</strong>:<br />
+  Jika repository utama berubah saat Anda bekerja, sinkronisasi perubahan dengan:</li>
+</ul>
+<p><code>bash
+  git remote add upstream https://github.com/original-owner/repository-name.git
+  git fetch upstream
+  git merge upstream/main</code></p>
+<blockquote>
+<p>Ganti <code>main</code> dengan branch utama yang digunakan di repository.</p>
+</blockquote>
+<ul>
+<li><strong>Ikuti Pedoman Kontribusi</strong>:<br />
+  Periksa file <code>CONTRIBUTING.md</code> di repository untuk panduan kontribusi spesifik.</li>
+</ul>
+<p>Dengan langkah ini, Anda dapat berkontribusi ke proyek GitHub dengan rapi dan profesional! 🎉</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Tersalin ke clipboard", "clipboard.copy": "Salin ke clipboard", "search.result.more.one": "1 lagi di halaman ini", "search.result.more.other": "# lagi di halaman ini", "search.result.none": "Tidak ada dokumen yang sesuai", "search.result.one": "1 dokumen ditemukan", "search.result.other": "# dokumen ditemukan", "search.result.placeholder": "Ketik untuk mulai pencarian", "search.result.term.missing": "Tidak ada", "select.version": "Pilih versi"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>

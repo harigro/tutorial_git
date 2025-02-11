@@ -1,0 +1,663 @@
+
+<!doctype html>
+<html lang="id" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../">
+      
+      
+        <link rel="next" href="../../komit/Menghapus%20dan%20Membatalkan%20Commit%20dengan%20Git/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Gabungan - Gitdocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tutorial-menggabungkan-repo-github-ke-repo-lokal-dan-mengirimnya-kembali-ke-github" class="md-skip">
+          Lewati ke isi
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="Gitdocs" class="md-header__button md-logo" aria-label="Gitdocs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Gitdocs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Gabungan
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Pilih bahasa">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../gabungan/Menggabungkan_Repo_Lokal_dengan_GitHub/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="id" class="md-select__link">
+              Indonesian
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigasi" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="Gitdocs" class="md-nav__button md-logo" aria-label="Gitdocs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Gitdocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Gabungan
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Gabungan
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Daftar isi">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Daftar isi
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-menggabungkan-repo-github-ke-repo-lokal-dan-mengirimnya-kembali-ke-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial Menggabungkan Repo GitHub ke Repo Lokal dan Mengirimnya Kembali ke GitHub
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kata-pengantar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kata Pengantar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-inisialisasi-repo-lokal" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Inisialisasi Repo Lokal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-tambahkan-repo-github-sebagai-remote" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Tambahkan Repo GitHub sebagai Remote
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-ambil-repo-dari-github-tanpa-overwrite" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Ambil Repo dari GitHub Tanpa Overwrite
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Ambil Repo dari GitHub Tanpa Overwrite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#memperbarui-repo-lokal-dari-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memperbarui Repo Lokal dari GitHub
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-gabungkan-repo-github-ke-repo-lokal" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Gabungkan Repo GitHub ke Repo Lokal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-kirim-repo-yang-sudah-digabung-ke-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Kirim Repo yang Sudah Digabung ke GitHub
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Kirim Repo yang Sudah Digabung ke GitHub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kata-penutup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kata Penutup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../komit/Menghapus%20dan%20Membatalkan%20Commit%20dengan%20Git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Komit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kontributor/Panduan%20Lengkap%20Membuat%20Pull%20Request%20di%20GitHub%20untuk%20Kontributor%20Pemula/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kontributor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mengunggah/upload_repo_to_github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mengunggah
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Daftar isi">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Daftar isi
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-menggabungkan-repo-github-ke-repo-lokal-dan-mengirimnya-kembali-ke-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial Menggabungkan Repo GitHub ke Repo Lokal dan Mengirimnya Kembali ke GitHub
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kata-pengantar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kata Pengantar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-inisialisasi-repo-lokal" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Inisialisasi Repo Lokal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-tambahkan-repo-github-sebagai-remote" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Tambahkan Repo GitHub sebagai Remote
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-ambil-repo-dari-github-tanpa-overwrite" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Ambil Repo dari GitHub Tanpa Overwrite
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Ambil Repo dari GitHub Tanpa Overwrite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#memperbarui-repo-lokal-dari-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memperbarui Repo Lokal dari GitHub
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-gabungkan-repo-github-ke-repo-lokal" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Gabungkan Repo GitHub ke Repo Lokal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-kirim-repo-yang-sudah-digabung-ke-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Kirim Repo yang Sudah Digabung ke GitHub
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Kirim Repo yang Sudah Digabung ke GitHub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kata-penutup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kata Penutup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Gabungan</h1>
+
+<h2 id="tutorial-menggabungkan-repo-github-ke-repo-lokal-dan-mengirimnya-kembali-ke-github"><strong>Tutorial Menggabungkan Repo GitHub ke Repo Lokal dan Mengirimnya Kembali ke GitHub</strong><a class="headerlink" href="#tutorial-menggabungkan-repo-github-ke-repo-lokal-dan-mengirimnya-kembali-ke-github" title="Permanent link">&para;</a></h2>
+<h2 id="kata-pengantar"><strong>Kata Pengantar</strong><a class="headerlink" href="#kata-pengantar" title="Permanent link">&para;</a></h2>
+<p>Git adalah alat yang sangat berguna untuk mengelola versi kode dalam pengembangan perangkat lunak. Sering kali, kita memiliki repo GitHub yang ingin digabungkan dengan repo lokal yang telah kita buat menggunakan <code>git init</code>. Tutorial ini akan membahas langkah-langkah untuk mengambil repo GitHub, menggabungkannya dengan repo lokal, dan mengirimkannya kembali ke GitHub.  </p>
+<hr />
+<h2 id="1-inisialisasi-repo-lokal"><strong>1. Inisialisasi Repo Lokal</strong><a class="headerlink" href="#1-inisialisasi-repo-lokal" title="Permanent link">&para;</a></h2>
+<p>Jika belum memiliki repo lokal, buatlah dengan perintah berikut:  </p>
+<pre><code class="language-bash">mkdir repository
+cd repository
+git init
+</code></pre>
+<hr />
+<h2 id="2-tambahkan-repo-github-sebagai-remote"><strong>2. Tambahkan Repo GitHub sebagai Remote</strong><a class="headerlink" href="#2-tambahkan-repo-github-sebagai-remote" title="Permanent link">&para;</a></h2>
+<p>Tambahkan repo GitHub ke repo lokal agar dapat mengambil data dari sana:  </p>
+<pre><code class="language-bash">git remote add origin https://github.com/username/repository.git
+</code></pre>
+<p>Pastikan remote sudah ditambahkan dengan menjalankan:  </p>
+<pre><code class="language-bash">git remote -v
+</code></pre>
+<hr />
+<h2 id="3-ambil-repo-dari-github-tanpa-overwrite"><strong>3. Ambil Repo dari GitHub Tanpa Overwrite</strong><a class="headerlink" href="#3-ambil-repo-dari-github-tanpa-overwrite" title="Permanent link">&para;</a></h2>
+<p>Karena repo lokal sudah ada, <strong>jangan langsung <code>git pull</code></strong> karena mungkin akan terjadi konflik. Sebagai gantinya, gunakan perintah berikut:  </p>
+<pre><code class="language-bash">git fetch origin
+</code></pre>
+<p>Perintah ini hanya mengambil perubahan dari repo GitHub tanpa menerapkannya langsung ke repo lokal.  </p>
+<p>Lihat daftar branch yang tersedia di repo GitHub:  </p>
+<pre><code class="language-bash">git branch -a
+</code></pre>
+<p>Jika branch <code>main</code> sudah ada di GitHub, buat branch baru di lokal berdasarkan branch tersebut:  </p>
+<pre><code class="language-bash">git checkout -b main origin/main
+</code></pre>
+<p>Jika branch <code>main</code> belum ada, buat dan pindah ke branch tersebut:  </p>
+<pre><code class="language-bash">git branch main
+git checkout main
+</code></pre>
+<h3 id="memperbarui-repo-lokal-dari-github"><strong>Memperbarui Repo Lokal dari GitHub</strong><a class="headerlink" href="#memperbarui-repo-lokal-dari-github" title="Permanent link">&para;</a></h3>
+<p>Jika repo GitHub diperbarui dan ingin memperbarui repo lokal, gunakan perintah berikut:  </p>
+<pre><code class="language-bash">git pull origin main
+</code></pre>
+<p>Perintah ini akan mengambil perubahan terbaru dari GitHub dan menggabungkannya ke repo lokal.  </p>
+<hr />
+<h2 id="4-gabungkan-repo-github-ke-repo-lokal"><strong>4. Gabungkan Repo GitHub ke Repo Lokal</strong><a class="headerlink" href="#4-gabungkan-repo-github-ke-repo-lokal" title="Permanent link">&para;</a></h2>
+<p>Gunakan perintah berikut untuk menggabungkan repo dari GitHub ke repo lokal:  </p>
+<pre><code class="language-bash">git merge origin/main
+</code></pre>
+<p>Jika ingin mengambil semua perubahan dari repo GitHub ke repo lokal tanpa perlu merge manual, gunakan perintah:</p>
+<pre><code class="language-bash">git checkout nama_cabang .
+</code></pre>
+<p>Namun, jika hanya ingin mengambil bagian tertentu dari repo GitHub, misalnya file atau commit tertentu, gunakan:</p>
+<pre><code class="language-bash">git checkout nama_cabang -- bagian_yang_ingin_diambil
+</code></pre>
+<p>Misalnya, jika hanya ingin mengambil file <code>config.php</code> dari branch <code>main</code>, jalankan:</p>
+<pre><code class="language-bash">git checkout main -- config.php
+</code></pre>
+<p>Jika terjadi konflik, edit file yang bermasalah, lalu jalankan:  </p>
+<pre><code class="language-bash">git add .
+git commit -m &quot;Resolve merge conflict&quot;
+</code></pre>
+<p>Jika muncul error seperti:  </p>
+<pre><code>fatal: refusing to merge unrelated histories
+</code></pre>
+<p>Gunakan opsi <code>--allow-unrelated-histories</code> saat merge:  </p>
+<pre><code class="language-bash">git merge origin/main --allow-unrelated-histories
+</code></pre>
+<hr />
+<h2 id="5-kirim-repo-yang-sudah-digabung-ke-github"><strong>5. Kirim Repo yang Sudah Digabung ke GitHub</strong><a class="headerlink" href="#5-kirim-repo-yang-sudah-digabung-ke-github" title="Permanent link">&para;</a></h2>
+<p>Setelah penggabungan selesai, kirim perubahan ke GitHub dengan perintah berikut:  </p>
+<pre><code class="language-bash">git push -u origin main
+</code></pre>
+<hr />
+<h3 id="kata-penutup"><strong>Kata Penutup</strong><a class="headerlink" href="#kata-penutup" title="Permanent link">&para;</a></h3>
+<p>Selamat! 🎉 Anda telah berhasil menggabungkan repo GitHub dengan repo lokal dan mengirimkannya kembali ke GitHub. Dengan mengikuti tutorial ini, Anda dapat mengelola proyek Git lebih baik dan bekerja secara kolaboratif dengan lebih efisien. Jika Anda mengalami kendala, pastikan untuk membaca pesan error dengan seksama atau bertanya kepada komunitas developer. 🚀</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Tersalin ke clipboard", "clipboard.copy": "Salin ke clipboard", "search.result.more.one": "1 lagi di halaman ini", "search.result.more.other": "# lagi di halaman ini", "search.result.none": "Tidak ada dokumen yang sesuai", "search.result.one": "1 dokumen ditemukan", "search.result.other": "# dokumen ditemukan", "search.result.placeholder": "Ketik untuk mulai pencarian", "search.result.term.missing": "Tidak ada", "select.version": "Pilih versi"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>

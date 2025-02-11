@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>None./</loc>
+        <lastmod>2025-02-11</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="None"/>
+        <xhtml:link rel="alternate" hreflang="id" href="Noneid/"/>
+    </url>
+    <url>
+        <loc>Nonegabungan/Menggabungkan_Repo_Lokal_dengan_GitHub/</loc>
+        <lastmod>2025-02-11</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonegabungan/Menggabungkan_Repo_Lokal_dengan_GitHub/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="Noneid/gabungan/Menggabungkan_Repo_Lokal_dengan_GitHub/"/>
+    </url>
+    <url>
+        <loc>Nonekomit/Menghapus%20dan%20Membatalkan%20Commit%20dengan%20Git/</loc>
+        <lastmod>2025-02-11</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonekomit/Menghapus%20dan%20Membatalkan%20Commit%20dengan%20Git/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="Noneid/komit/Menghapus%20dan%20Membatalkan%20Commit%20dengan%20Git/"/>
+    </url>
+    <url>
+        <loc>Nonekontributor/Panduan%20Lengkap%20Membuat%20Pull%20Request%20di%20GitHub%20untuk%20Kontributor%20Pemula/</loc>
+        <lastmod>2025-02-11</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonekontributor/Panduan%20Lengkap%20Membuat%20Pull%20Request%20di%20GitHub%20untuk%20Kontributor%20Pemula/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="Noneid/kontributor/Panduan%20Lengkap%20Membuat%20Pull%20Request%20di%20GitHub%20untuk%20Kontributor%20Pemula/"/>
+    </url>
+    <url>
+        <loc>Nonemengunggah/upload_repo_to_github/</loc>
+        <lastmod>2025-02-11</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonemengunggah/upload_repo_to_github/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="Noneid/mengunggah/upload_repo_to_github/"/>
+    </url>
+    <url>
+        <loc>Noneid/</loc>
+        <lastmod>2025-02-11</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="id" href="Noneid/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="None"/>
+    </url>
+    <url>
+        <loc>Noneid/gabungan/Menggabungkan_Repo_Lokal_dengan_GitHub/</loc>
+        <lastmod>2025-02-11</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="id" href="Noneid/gabungan/Menggabungkan_Repo_Lokal_dengan_GitHub/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonegabungan/Menggabungkan_Repo_Lokal_dengan_GitHub/"/>
+    </url>
+    <url>
+        <loc>Noneid/komit/Menghapus%20dan%20Membatalkan%20Commit%20dengan%20Git/</loc>
+        <lastmod>2025-02-11</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="id" href="Noneid/komit/Menghapus%20dan%20Membatalkan%20Commit%20dengan%20Git/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonekomit/Menghapus%20dan%20Membatalkan%20Commit%20dengan%20Git/"/>
+    </url>
+    <url>
+        <loc>Noneid/kontributor/Panduan%20Lengkap%20Membuat%20Pull%20Request%20di%20GitHub%20untuk%20Kontributor%20Pemula/</loc>
+        <lastmod>2025-02-11</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="id" href="Noneid/kontributor/Panduan%20Lengkap%20Membuat%20Pull%20Request%20di%20GitHub%20untuk%20Kontributor%20Pemula/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonekontributor/Panduan%20Lengkap%20Membuat%20Pull%20Request%20di%20GitHub%20untuk%20Kontributor%20Pemula/"/>
+    </url>
+    <url>
+        <loc>Noneid/mengunggah/upload_repo_to_github/</loc>
+        <lastmod>2025-02-11</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="id" href="Noneid/mengunggah/upload_repo_to_github/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonemengunggah/upload_repo_to_github/"/>
+    </url>
+</urlset>

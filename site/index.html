@@ -1,0 +1,853 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="gabungan/Menggabungkan_Repo_Lokal_dengan_GitHub/">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Gitdocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.6f8fc17f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#konfigurasi-git" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Gitdocs" class="md-header__button md-logo" aria-label="Gitdocs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Gitdocs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/id/" hreflang="id" class="md-select__link">
+              Indonesian
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Gitdocs" class="md-nav__button md-logo" aria-label="Gitdocs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Gitdocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#konfigurasi-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Konfigurasi Git:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#membuat-repository-baru" class="md-nav__link">
+    <span class="md-ellipsis">
+      Membuat Repository Baru:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mengecek-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mengecek Status:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#menambahkan-perubahan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Menambahkan Perubahan:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#membuat-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Membuat Commit:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#melihat-riwayat-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Melihat Riwayat Commit:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mengelola-cabang-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mengelola Cabang (Branch):
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mengatur-remote-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mengatur Remote Repository:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mengatasi-konflik-dan-revert" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mengatasi Konflik dan Revert:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mengelola-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mengelola Tag:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perintah-lainnya" class="md-nav__link">
+    <span class="md-ellipsis">
+      Perintah Lainnya:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gabungan/Menggabungkan_Repo_Lokal_dengan_GitHub/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gabungan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="komit/Menghapus%20dan%20Membatalkan%20Commit%20dengan%20Git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Komit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="kontributor/Panduan%20Lengkap%20Membuat%20Pull%20Request%20di%20GitHub%20untuk%20Kontributor%20Pemula/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kontributor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mengunggah/upload_repo_to_github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mengunggah
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#konfigurasi-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Konfigurasi Git:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#membuat-repository-baru" class="md-nav__link">
+    <span class="md-ellipsis">
+      Membuat Repository Baru:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mengecek-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mengecek Status:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#menambahkan-perubahan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Menambahkan Perubahan:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#membuat-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Membuat Commit:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#melihat-riwayat-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Melihat Riwayat Commit:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mengelola-cabang-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mengelola Cabang (Branch):
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mengatur-remote-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mengatur Remote Repository:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mengatasi-konflik-dan-revert" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mengatasi Konflik dan Revert:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mengelola-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mengelola Tag:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perintah-lainnya" class="md-nav__link">
+    <span class="md-ellipsis">
+      Perintah Lainnya:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Home</h1>
+
+<p>Berikut adalah cheat sheet Git lengkap dengan contoh perintah:</p>
+<h3 id="konfigurasi-git"><strong>Konfigurasi Git:</strong><a class="headerlink" href="#konfigurasi-git" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>git config --global user.name "Nama Anda"</code><br />
+  Menetapkan nama pengguna Git global.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git config --global user.name "John Doe"</code></p>
+<ul>
+<li><code>git config --global user.email "email@example.com"</code><br />
+  Menetapkan email Git global.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git config --global user.email "john.doe@example.com"</code></p>
+<ul>
+<li><code>git config --list</code><br />
+  Menampilkan konfigurasi Git saat ini.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git config --list</code></p>
+<h3 id="membuat-repository-baru"><strong>Membuat Repository Baru:</strong><a class="headerlink" href="#membuat-repository-baru" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>git init</code><br />
+  Membuat repository Git baru.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git init</code></p>
+<ul>
+<li><code>git clone &lt;url&gt;</code><br />
+  Mengkloning repository dari URL.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git clone https://github.com/username/repo.git</code></p>
+<h3 id="mengecek-status"><strong>Mengecek Status:</strong><a class="headerlink" href="#mengecek-status" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>git status</code><br />
+  Menampilkan status perubahan file dalam repository.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git status</code></p>
+<ul>
+<li><code>git diff</code><br />
+  Menampilkan perbedaan antara file yang dimodifikasi dan versi terakhir yang disimpan.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git diff</code></p>
+<h3 id="menambahkan-perubahan"><strong>Menambahkan Perubahan:</strong><a class="headerlink" href="#menambahkan-perubahan" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>git add &lt;file&gt;</code><br />
+  Menambahkan file tertentu ke staging area.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git add index.html</code></p>
+<ul>
+<li><code>git add .</code><br />
+  Menambahkan semua perubahan di direktori ke staging area.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git add .</code></p>
+<h3 id="membuat-commit"><strong>Membuat Commit:</strong><a class="headerlink" href="#membuat-commit" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>git commit -m "Pesan commit"</code><br />
+  Membuat commit dengan pesan.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git commit -m "Menambahkan halaman index"</code></p>
+<ul>
+<li><code>git commit -a</code><br />
+  Commit semua perubahan yang sudah dilacak.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git commit -a</code></p>
+<h3 id="melihat-riwayat-commit"><strong>Melihat Riwayat Commit:</strong><a class="headerlink" href="#melihat-riwayat-commit" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>git log</code><br />
+  Menampilkan riwayat commit.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git log</code></p>
+<ul>
+<li><code>git log --oneline</code><br />
+  Menampilkan riwayat commit dalam format satu baris.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git log --oneline</code></p>
+<h3 id="mengelola-cabang-branch"><strong>Mengelola Cabang (Branch):</strong><a class="headerlink" href="#mengelola-cabang-branch" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>git branch</code><br />
+  Menampilkan semua cabang yang ada.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git branch</code></p>
+<ul>
+<li><code>git branch &lt;nama_cabang&gt;</code><br />
+  Membuat cabang baru.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git branch fitur-1</code></p>
+<ul>
+<li><code>git checkout &lt;nama_cabang&gt;</code><br />
+  Berpindah ke cabang tertentu.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git checkout fitur-1</code></p>
+<ul>
+<li><code>git checkout -b &lt;nama_cabang&gt;</code><br />
+  Membuat dan langsung berpindah ke cabang baru.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git checkout -b fitur-2</code></p>
+<ul>
+<li><code>git merge &lt;nama_cabang&gt;</code><br />
+  Menggabungkan perubahan dari cabang lain.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git merge fitur-1</code></p>
+<ul>
+<li><code>git branch -d &lt;nama_cabang&gt;</code><br />
+  Menghapus cabang lokal.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git branch -d fitur-2</code></p>
+<h3 id="mengatur-remote-repository"><strong>Mengatur Remote Repository:</strong><a class="headerlink" href="#mengatur-remote-repository" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>git remote add &lt;nama_remote&gt; &lt;url&gt;</code><br />
+  Menambahkan remote repository.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git remote add origin https://github.com/username/repo.git</code></p>
+<ul>
+<li><code>git remote -v</code><br />
+  Menampilkan daftar remote repository.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git remote -v</code></p>
+<ul>
+<li><code>git fetch</code><br />
+  Mengambil perubahan terbaru dari remote repository.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git fetch</code></p>
+<ul>
+<li><code>git pull</code><br />
+  Mengambil dan menggabungkan perubahan dari remote.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git pull origin main</code></p>
+<ul>
+<li><code>git push</code><br />
+  Mengirim perubahan ke remote repository.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git push</code></p>
+<ul>
+<li><code>git push &lt;remote&gt; &lt;branch&gt;</code><br />
+  Mengirim cabang tertentu ke remote repository.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git push origin fitur-1</code></p>
+<h3 id="mengatasi-konflik-dan-revert"><strong>Mengatasi Konflik dan Revert:</strong><a class="headerlink" href="#mengatasi-konflik-dan-revert" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>git revert &lt;commit_id&gt;</code><br />
+  Membalikkan perubahan yang dilakukan oleh commit tertentu.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git revert 3a2b1c4</code></p>
+<ul>
+<li><code>git reset &lt;commit_id&gt;</code><br />
+  Mengatur ulang HEAD ke commit tertentu (menghapus commit yang lebih baru).<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git reset 3a2b1c4</code></p>
+<ul>
+<li><code>git reset --hard &lt;commit_id&gt;</code><br />
+  Menghapus semua perubahan lokal dan mengatur ulang ke commit tertentu.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git reset --hard 3a2b1c4</code></p>
+<h3 id="mengelola-tag"><strong>Mengelola Tag:</strong><a class="headerlink" href="#mengelola-tag" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>git tag</code><br />
+  Menampilkan semua tag.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git tag</code></p>
+<ul>
+<li><code>git tag &lt;tag_name&gt;</code><br />
+  Membuat tag baru.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git tag v1.0</code></p>
+<ul>
+<li><code>git push origin &lt;tag_name&gt;</code><br />
+  Mengirim tag ke remote repository.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git push origin v1.0</code></p>
+<h3 id="perintah-lainnya"><strong>Perintah Lainnya:</strong><a class="headerlink" href="#perintah-lainnya" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>git stash</code><br />
+  Menyimpan perubahan yang belum di-commit sementara.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git stash</code></p>
+<ul>
+<li><code>git stash pop</code><br />
+  Mengembalikan perubahan yang disimpan oleh stash.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git stash pop</code></p>
+<ul>
+<li><code>git show &lt;commit_id&gt;</code><br />
+  Menampilkan detail commit tertentu.<br />
+<strong>Contoh</strong>:</li>
+</ul>
+<p><code>bash
+  git show 3a2b1c4</code></p>
+<p>Itulah contoh penggunaan perintah Git yang sering digunakan dalam berbagai situasi.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>
