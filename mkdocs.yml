@@ -1,0 +1,31 @@
+site_name: Gitdocs
+theme:
+  name: material
+plugins:
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: id
+          name: Indonesian
+          build: true
+nav:
+  - Beranda: index.md
+  - Gabungan: 
+    - Memasukan Repo Eksternal ke Repo Internal: gabungan/Memasukkan Repo C ke dalam Repo A pada Cabang B.md
+    - Memasukan Repo Eksternal ke Repo Internal Tanpa Kehilangan Sejarah Komit: gabungan/Menggabungkan Repo C ke dalam Repo Utama Tanpa Kehilangan Sejarah Commit.md
+    - Repo Github Ke Repo Lokal: gabungan/Menggabungkan_Repo_Lokal_dengan_GitHub.md
+    - Perintah: 
+      - Git SubTree: gabungan/perintah/Menambahkan Repository Eksternal ke dalam Repository Internal.md
+      - Perbedaan Perintah Pada Git Fetch: gabungan/perintah/Perbedaan Perintah.md
+  - Komit: komit/Menghapus dan Membatalkan Commit dengan Git.md
+  - Kontributor: kontributor/Panduan Lengkap Membuat Pull Request di GitHub untuk Kontributor Pemula.md
+  - Mengunggah: mengunggah/upload_repo_to_github.md
+  - Perbahrui Repo: 
+    - Memperbarui Repo Lokal A' dengan Repo A di GitHub: Perbahrui/Memperbahrui Repo A' Lokal Dari Repo A di Github.md
+markdown_extensions:
+  - toc:
+      permalink: true
