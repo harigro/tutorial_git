@@ -20,6 +20,7 @@ nav:
     - Repo Github Ke Repo Lokal: gabungan/Menggabungkan_Repo_Lokal_dengan_GitHub.md
     - Perintah: 
       - Git SubTree: gabungan/perintah/Menambahkan Repository Eksternal ke dalam Repository Internal.md
+      - Menghapus Remote: gabungan/perintah/Menghapus remote.md
       - Perbedaan Perintah Pada Git Fetch: gabungan/perintah/Perbedaan Perintah.md
   - Komit: komit/Menghapus dan Membatalkan Commit dengan Git.md
   - Kontributor: kontributor/Panduan Lengkap Membuat Pull Request di GitHub untuk Kontributor Pemula.md
