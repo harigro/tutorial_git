@@ -111,7 +111,7 @@ fatal: refusing to merge unrelated histories
 Gunakan opsi `--allow-unrelated-histories` saat merge:  
 
 ```bash
-git merge origin/main --allow-unrelated-histories -m "sesuiakan sesuka hati
+git merge origin/main --allow-unrelated-histories -m "sesuiakan sesuka hati"
 ```
 
 ---
