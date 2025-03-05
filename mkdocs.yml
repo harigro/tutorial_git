@@ -15,9 +15,9 @@ plugins:
 nav:
   - Beranda: index.md
   - Gabungan: 
-    - Repo Github Ke Repo Lokal: gabungan/Menggabungkan_Repo_Lokal_dengan_GitHub.md
     - Memasukan Repo Eksternal ke Repo Internal: gabungan/Memasukkan Repo C ke dalam Repo A pada Cabang B.md
     - Memasukan Repo Eksternal ke Repo Internal Tanpa Kehilangan Sejarah Komit: gabungan/Menggabungkan Repo C ke dalam Repo Utama Tanpa Kehilangan Sejarah Commit.md
+    - Repo Github Ke Repo Lokal: gabungan/Menggabungkan_Repo_Lokal_dengan_GitHub.md
     - Perbedaan Perintah Pada Git Fetch: gabungan/Perbedaan Perintah.md
   - Komit: komit/Menghapus dan Membatalkan Commit dengan Git.md
   - Kontributor: kontributor/Panduan Lengkap Membuat Pull Request di GitHub untuk Kontributor Pemula.md
