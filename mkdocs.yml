@@ -13,7 +13,7 @@ plugins:
           name: Indonesian
           build: true
 nav:
-  - Home: index.md
+  - Beranda: index.md
   - Gabungan: 
     - Repo Github Ke Repo Lokal: gabungan/Menggabungkan_Repo_Lokal_dengan_GitHub.md
     - Memasukan Repo Eksternal ke Repo Internal: gabungan/Memasukkan Repo C ke dalam Repo A pada Cabang B.md
