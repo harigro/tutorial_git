@@ -19,8 +19,8 @@ nav:
     - Memasukan Repo Eksternal ke Repo Internal Tanpa Kehilangan Sejarah Komit: gabungan/Menggabungkan Repo C ke dalam Repo Utama Tanpa Kehilangan Sejarah Commit.md
     - Repo Github Ke Repo Lokal: gabungan/Menggabungkan_Repo_Lokal_dengan_GitHub.md
     - Perintah: 
-      - Git SubTree: Menambahkan Repository Eksternal ke dalam Repository Internal.md
-      - Perbedaan Perintah Pada Git Fetch: gabungan/Perbedaan Perintah.md
+      - Git SubTree: gabungan/perintah/Menambahkan Repository Eksternal ke dalam Repository Internal.md
+      - Perbedaan Perintah Pada Git Fetch: gabungan/perintah/Perbedaan Perintah.md
   - Komit: komit/Menghapus dan Membatalkan Commit dengan Git.md
   - Kontributor: kontributor/Panduan Lengkap Membuat Pull Request di GitHub untuk Kontributor Pemula.md
   - Mengunggah: mengunggah/upload_repo_to_github.md
