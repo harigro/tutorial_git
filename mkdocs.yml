@@ -1,6 +1,6 @@
 site_name: Gitdocs
 theme:
-  name: material
+  name: simple-blog
 plugins:
   - i18n:
       docs_structure: suffix
