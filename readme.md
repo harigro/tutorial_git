@@ -1,9 +1,15 @@
 # Tutorial Perintah Git dan GitHub
 
-Repo ini berisi tutorial dan panduan penggunaan perintah dasar hingga lanjutan dalam Git dan GitHub.
+Repo ini berisi tutorial dan panduan penggunaan perintah dasar hingga lanjutan dalam Git dan GitHub yang dibuat menggunakan `mkdocs dan bahasa python`.
 
 ## Pendahuluan
 Git adalah sistem kontrol versi terdistribusi yang digunakan untuk melacak perubahan kode. GitHub adalah layanan hosting untuk repositori Git yang memungkinkan kolaborasi dan pengelolaan proyek secara online.
+
+## Instalasi dependensi
+Instalasi `mkdocs` menggunakan pip
+```sh
+pip install mkdocs
+```
 
 ## Instalasi Git
 Unduh dan instal Git sesuai dengan sistem operasi Anda:
